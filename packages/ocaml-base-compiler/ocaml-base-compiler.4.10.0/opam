@@ -44,7 +44,7 @@ post-messages: [
   {failure & jobs > 1 & opam-version >= "2.0.5"}
 ]
 available: !(os = "macos" & arch = "arm64")
-patches: ["alt-signal-stack.patch"]
+patches: ["fix-gcc15.patch" "alt-signal-stack.patch"]
 extra-source "alt-signal-stack.patch" {
   src: "https://github.com/ocaml/ocaml/commit/4b4c643d1d5d28738f6d900cd902851ed9dc5364.patch?full_index=1"
   checksum: "sha256=355fa7bd55ce5646db1365b116082aee31f9b466f0ffc27723f5971d03c14a53"
@@ -56,4 +56,8 @@ extra-source "ocaml-base-compiler.install" {
     "sha256=79f2a1a5044a91350a0eb6ce12e261a72a2855c094c425cddf3860e58c486678"
     "md5=3e969b841df1f51ca448e6e6295cb451"
   ]
+}
+extra-source "fix-gcc15.patch" {
+  src: "https://github.com/ocaml-opam/ocaml/commit/0ee9747a16a45ad2eeef36ae39cef2580b4a9253.patch?full_index=1"
+  checksum: "sha256=244c25dcda913375d160190cbba67f1a640785db642a08d66fed24c580368e58"
 }
