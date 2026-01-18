@@ -120,6 +120,11 @@ depopts: [
   "ocaml-option-nnp"
   "ocaml-option-nnpchecker"
 ]
+patches: ["fix-gcc15.patch"]
+extra-source "fix-gcc15.patch" {
+  src: "https://github.com/ocaml-opam/ocaml/commit/6439d4164bcd8d6d67a1645707adb06157b3b42c.patch?full_index=1"
+  checksum: "sha256=7c16cae0b812470b0c02291b31e88246a7cf9719062a343a651654dcf0ce36fd"
+}
 extra-source "ocaml-variants.install" {
   src:
     "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocaml-variants/ocaml-variants.install"

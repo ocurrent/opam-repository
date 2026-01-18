@@ -136,6 +136,11 @@ depopts: [
   "ocaml-option-address-sanitizer"
   "ocaml-option-static"
 ]
+patches: ["fix-gcc15.patch"]
+extra-source "fix-gcc15.patch" {
+  src: "https://github.com/ocaml-opam/ocaml/commit/9b24f5f5ad767ff442d69fd677356e3f069e492e.patch?full_index=1"
+  checksum: "sha256=6741206efd92e0962207d2ca301be8ffd65b8638f73b2f47125f430e2090a1b0"
+}
 extra-source "ocaml-variants.install" {
   src:
     "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocaml-variants/ocaml-variants.install"
